@@ -1,0 +1,122 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.flag-title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.flag {
+    width: 900px;  
+    height: 600px;
+    border: 2px solid #000;
+}
+
+.stripe {
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.orange {
+    background: linear-gradient(90deg, #FF9933 0%, #FF5733 50%, #FF9933 100%);
+    animation: shiny 2s infinite linear;
+}
+
+.white {
+    background: white;
+    position: relative;
+}
+
+.green {
+    background: linear-gradient(90deg, #138808 0%, #0B6623 50%, #138808 100%);
+    animation: shiny 2s infinite linear;
+}
+
+.chakra {
+    width: 198px;
+    height: 198px;
+    border: 4px solid #000080;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.spoke-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.spoke {
+    width: 2px;
+    height: 100%;
+    background-color: #000080;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 50% 50%;
+}
+
+.spoke:nth-child(1) { transform: rotate(0deg); }
+.spoke:nth-child(2) { transform: rotate(15deg); }
+.spoke:nth-child(3) { transform: rotate(30deg); }
+.spoke:nth-child(4) { transform: rotate(45deg); }
+.spoke:nth-child(5) { transform: rotate(60deg); }
+.spoke:nth-child(6) { transform: rotate(75deg); }
+.spoke:nth-child(7) { transform: rotate(90deg); }
+.spoke:nth-child(8) { transform: rotate(105deg); }
+.spoke:nth-child(9) { transform: rotate(120deg); }
+.spoke:nth-child(10) { transform: rotate(135deg); }
+.spoke:nth-child(11) { transform: rotate(150deg); }
+.spoke:nth-child(12) { transform: rotate(165deg); }
+.spoke:nth-child(13) { transform: rotate(180deg); }
+.spoke:nth-child(14) { transform: rotate(195deg); }
+.spoke:nth-child(15) { transform: rotate(210deg); }
+.spoke:nth-child(16) { transform: rotate(225deg); }
+.spoke:nth-child(17) { transform: rotate(240deg); }
+.spoke:nth-child(18) { transform: rotate(255deg); }
+.spoke:nth-child(19) { transform: rotate(270deg); }
+.spoke:nth-child(20) { transform: rotate(285deg); }
+.spoke:nth-child(21) { transform: rotate(300deg); }
+.spoke:nth-child(22) { transform: rotate(315deg); }
+.spoke:nth-child(23) { transform: rotate(330deg); }
+.spoke:nth-child(24) { transform: rotate(345deg); }
+
+.chakra:hover .spoke-container {
+    animation: rotateChakra 2s linear infinite;
+}
+
+@keyframes shiny {
+    0% {
+        background-position: -450px;
+    }
+    100% {
+        background-position: 450px;
+    }
+}
+
+@keyframes rotateChakra {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
